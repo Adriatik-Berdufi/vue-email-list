@@ -16,7 +16,7 @@ const app = createApp({
                     this.mailList.push(risultato);   
                });                      
         },
-        getNeEmails() {for(let i = 0; i < this.nr; i++){
+        getNrOfEEmails() {for(let i = 0; i < this.nr; i++){
             this.getEmailAPI();
             this.mailList = [];
         }
