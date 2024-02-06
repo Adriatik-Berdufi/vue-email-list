@@ -9,7 +9,7 @@ const app = createApp({
     },
     methods: {
      
-        getEmailAPI(i) {             
+        getEmailAPI() {             
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((mail) => {
                     const risultato = mail.data.response;
@@ -17,7 +17,7 @@ const app = createApp({
                });                      
         },
         getNeEmails() {for(let i = 0; i < this.nr; i++){
-            this.getEmailAPI(i);
+            this.getEmailAPI();
             this.mailList = [];
         }
              },
