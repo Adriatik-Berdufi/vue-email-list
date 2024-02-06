@@ -32,14 +32,14 @@
 
         <div class="card w-50">
           <div class="card-header d-flex justify-content-center">
+            <input v-model="nr" class="form-control w-25 " type="number" min="1" max="100" value="1" placeholder="inserici nr delle mail">
             <button @click="getNeEmails()" class="btn btn-primary mx-3">Genera</button>
           </div>
           <div class="card-body">
-            <ul v-if="mailList.length >= 10">
+            <ul v-if="mailList.length >= nr">
               <li v-for="email in mailList" class="email_list-el">
                 {{email}}
             </li>
-
             </ul>
           </div>
 

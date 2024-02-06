@@ -4,6 +4,7 @@ const app = createApp({
         return{
             title: 'Mail generator',
             mailList:[],
+            nr:0,
         };
     },
     methods: {
@@ -12,11 +13,14 @@ const app = createApp({
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((mail) => {
                     const risultato = mail.data.response;
-                    this.mailList.push(risultato);
-               });
-                                  
+                    this.mailList.push(risultato);   
+               });                      
         },
-        getNeEmails() {for(let i = 0; i < 10; i++) {this.getEmailAPI(i);}},
+        getNeEmails() {for(let i = 0; i < this.nr; i++){
+            this.getEmailAPI(i);
+            this.mailList = [];
+        }
+             },
     },
        
     mounted(){
