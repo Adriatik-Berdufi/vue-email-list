@@ -24,9 +24,6 @@ a {
 ul {
   list-style: none;
 }
-li {
-  display: inline-block;
-}
 body{
   background-color: rgba(212, 200, 184, 0.856);
 }
@@ -39,6 +36,10 @@ body{
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .brd{
   border: 2px dashed black;

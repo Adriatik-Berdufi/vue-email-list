@@ -2,7 +2,7 @@ const {createApp} = Vue;
 const app = createApp({
     data(){
         return{
-            title: 'New Project',
+            title: 'Mail generator',
         };
     },
     methods: {
