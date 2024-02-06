@@ -20,7 +20,7 @@ const app = createApp({
             this.getEmailAPI();
             this.mailList = [];
         }
-             },
+        },
     },
        
     mounted(){
